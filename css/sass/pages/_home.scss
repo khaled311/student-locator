@@ -1,0 +1,247 @@
+header{
+    height: 100vh;
+    background-image:linear-gradient(to bottom,rgba($color-blue,.9),rgba($color-green,.9)), url(../../imgs/bg.jpg);
+    background-size: cover;
+    background-position: top;
+
+    @include respond(767){
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+    & .navbar{
+        background-color: transparent !important;
+        transition: .2s;
+
+        @include respond(767){
+            padding: 1.5rem 2rem;
+        }
+
+        &.scrolled{
+            background-color: rgba($color-blue, .95) !important;
+            box-shadow: 0 .2rem 1rem $color-grey;
+        }
+
+        &.hide{
+            transform: translateY(-100%);
+        }
+
+        & .navbar-brand{
+            
+
+            & img{
+                width: 10rem
+            }
+        }
+
+        & .navbar-nav{
+            @include respond(767){
+                padding: 2rem 0;
+            }
+
+            & .nav-link{
+                margin-left: 1rem;
+                padding: .7rem 1.5rem;
+                border-radius: 10rem;
+                text-transform: uppercase;
+                transition: .2s;
+
+                @include respond(767){
+                    margin: .5rem 0;
+                }
+
+                &.active, &:hover{
+                    background-color: rgba($color-white, .5) !important;
+                }
+            }
+        }
+    }
+
+    & .content{
+        align-items: center;
+
+
+        & .image{
+            padding: 0 2.5rem;
+            height: 55rem;
+            margin-top: 17rem;
+
+            @include respond(mid){
+                height: 48rem;
+                transform: translateY(5rem);
+                padding: 0;
+            }
+
+            & img{
+                height: 100%;
+                width: 100%;
+            }
+        }
+
+        & .col-md-6:last-of-type{
+
+            & .right{
+                padding: 6.5rem;
+                padding-left: 0;
+                margin-top: 5rem;
+
+                @include respond(425){
+                    padding-right: 0;
+                }
+
+                @include respond(mid){
+                    padding-right: 0;
+                }
+    
+                & h2{
+                    color: $color-white;
+                    line-height: 1.6;
+                    margin-top: 6rem;
+                }
+    
+                & p{
+                    font-size: 1.8rem;
+                    line-height: 1.6;
+                    color: $color-white;
+                    font-weight: 400;
+                }
+    
+                & button{
+                    border: 0;
+                    background-color: $color-white;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin-top: 2.5rem;
+                    padding: .7rem 1.5rem;
+                    border-radius: 10rem;
+                    transition-duration: .2s;
+                    backface-visibility: hidden;
+    
+                    &:hover{
+                        transform: translateY(-.2rem);
+                        box-shadow: 0 .2rem 1rem $color-grey;
+                    }
+    
+                    & img{
+                        width: 2rem;
+                        margin-right: .5rem;
+                    }
+                }
+            }
+        }
+
+        
+    }
+}
+// -----------------------------------------------------------------------------
+// End Of Header Section
+// -----------------------------------------------------------------------------
+
+
+// -----------------------------------------------------------------------------
+// Start Of QR Section
+// -----------------------------------------------------------------------------
+
+.qr-sec{
+    padding-bottom: 0;
+
+    & h2{
+        margin-top: 3.5rem;
+        font-size: 4rem;
+        color: $color-blue;
+        padding-right: 1rem;
+    }
+
+    & p{
+        font-size: 2rem;
+        padding: 4rem;
+        padding-left: 0;
+    }
+
+    & img{
+        height: 45rem;
+    }
+}
+// -----------------------------------------------------------------------------
+// End Of QR Section
+// -----------------------------------------------------------------------------
+
+
+// -----------------------------------------------------------------------------
+// Start Of Progress Section
+// -----------------------------------------------------------------------------
+.progress-sec{
+    background-image: linear-gradient($color-blue, $color-green);
+    color: $color-white;
+
+    .col-md-6:first-of-type{
+
+        & img{
+            height: 100%;
+            width: 100%;
+
+            @include respond(0){
+                margin-left: 6rem;
+            }
+        }
+
+        @include respond(767){
+            margin-bottom: 3rem;
+        }
+    }
+    
+    & h2{
+        font-weight: bold;
+        margin-bottom: 2.5rem;
+    }
+
+    & p{
+        font-size: 2rem;
+    }
+}
+// -----------------------------------------------------------------------------
+// End Of Progress Section
+// -----------------------------------------------------------------------------
+
+
+// -----------------------------------------------------------------------------
+// Start Of Notification Section
+// -----------------------------------------------------------------------------
+.notification-sec{
+
+    & h2{
+        margin-top: 3.5rem;
+        font-size: 4rem;
+        color: $color-blue;
+        padding-right: 1rem;
+    }
+
+    & p{
+        font-size: 2rem;
+        padding: 4rem;
+        padding-left: 0;
+    }
+
+    & img{
+        height: 26rem;
+    }
+}
+// -----------------------------------------------------------------------------
+// End Of Notification Section
+// -----------------------------------------------------------------------------
+
+
+// -----------------------------------------------------------------------------
+// Start Of End Section
+// -----------------------------------------------------------------------------
+.end{
+    padding: 2.5rem;
+    background-color: $color-blue;
+}
+
+// -----------------------------------------------------------------------------
+// End Of End Section
+// -----------------------------------------------------------------------------

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="css/bootstrap4.min.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"/>
+    <link rel="stylesheet" href="css/style__contact.css"/>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light">
+        <div class="container"><a class="navbar-brand" href="index.html"><img src="imgs/login/logo.svg" alt="LOGO"/></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto text-center">
+              <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="profile.html">My Account</a></li>
+              <li class="nav-item"><a class="nav-link active" href="contact.html">Contact Us</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div class="content">
+        <h2>Contact Us</h2>
+      </div>
+    </header>
+    <!--start contact form-->
+    <div class="contact-form">
+      <div class="container">
+        <div class="contact-container">
+          <div class="row">
+            <div class="col-md-7 col-12 col-sm-6">
+              <div class="left">
+                <h3>We want to hear from you!</h3>
+                <form action="#">
+                  <input type="text" name="first name" placeholder="First name" required="required"/>
+                  <input type="text" name="last name" placeholder="Last name" required="required"/>
+                  <input type="email" name="email" placeholder="Email" required="required"/>
+                  <input type="number" name="last name" placeholder="Phone" required="required"/>
+                  <textarea name="Message" cols="30" rows="10" placeholder="Enter Your Message Here" required="required"></textarea>
+                  <div class="submit"></div>
+                  <button>Submit</button>
+                </form>
+              </div>
+            </div>
+            <div class="col-md-5 col-12 col-sm-6 contact-right">
+              <div class="right">
+                <h3>Contact Information</h3>
+                <div class="icon-box">
+                  <div class="box"><img src="imgs/contact/path.svg"/>
+                    <p>222 talkha,25 smad street Mansoura</p>
+                  </div>
+                  <div class="box"><img src="imgs/contact/path-1.svg"/>
+                    <p>0200215484515</p>
+                  </div>
+                  <div class="box"><img src="imgs/contact/path-2.svg"/>
+                    <p>info@delta.com</p>
+                  </div>
+                  <div class="box-bottom"><a href="#"><img src="imgs/contact/Path201.svg"/></a><a href="#"><img src="imgs/contact/in.svg"/></a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="end"></div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+    <!--script(src="http://localhost:35729/livereload.js")-->
+  </body>
+</html>

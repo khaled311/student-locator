@@ -1,0 +1,248 @@
+//start header
+header{
+    height: 100vh;
+    background-image:linear-gradient(to bottom,rgba($color-blue,.9),rgba($color-green,.9)), url(../../imgs/bg.jpg);
+    background-size: cover;
+    @media (max-width:768px) {
+        height: 65vh;
+    }
+    position: relative;
+    @include respond(767){
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+
+    & .navbar{
+        background-color: transparent !important;
+        transition: .2s;
+
+        @include respond(767){
+            padding: 1.5rem 2rem;
+        }
+
+        &.scrolled{
+            background-color: $color-blue !important;
+            box-shadow: 0 .2rem 1rem $color-grey;
+        }
+
+        &.hide{
+            transform: translateY(-100%);
+        }
+
+        & .navbar-brand{
+            
+
+            & img{
+                width: 10rem
+            }
+        }
+
+        & .navbar-nav{
+            @include respond(767){
+                padding: 2rem 0;
+            }
+
+            & .nav-link{
+                margin-left: 1rem;
+                padding: .7rem 1.5rem;
+                border-radius: 10rem;
+                text-transform: uppercase;
+                transition: .2s;
+
+                @include respond(767){
+                    margin: .5rem 0;
+                }
+
+                &.active, &:hover{
+                    background-color: rgba($color-white, .5) !important;
+                }
+            }
+        }
+    }
+    .content{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        h2{
+            font-size: 7.3rem;
+            color:$color-white;
+            @include respond(phone){
+                font-size: 7rem;
+                margin-top: -10rem;
+            }
+        }
+    }
+}
+//start contact form
+.contact-form{
+    background-color: $color-white;
+    .contact-container{
+        background-color:#fff;
+        box-shadow:0 .3rem 0.6rem $color-grey ,0 -.3rem 0.6rem $color-grey;
+        transform: translateY(-30%);
+        border-radius: .5rem;
+        overflow: hidden;
+        @media (max-width:768px) {
+            transform: translateY(-17%);
+            margin-bottom: -5rem;
+        }
+        @include respond(phone){
+            transform: translateY(-14%);
+        }
+        
+        .left{
+            padding: 4rem 3rem;
+            @media (max-width:768px) {
+                padding: 3rem 0 3rem 2rem;
+            }
+            @media (max-width:575px) {
+                padding: 3rem  ;
+            }
+            h3{
+                font-size: 2.2rem;
+                color: $color-black;
+                font-weight: bold;
+                margin-bottom: 3rem;
+                text-transform: uppercase;
+                @media (max-width:768px) {
+                    font-size: 1.8rem;
+                }
+            }
+            form{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                width: 100%;
+                input,textarea{
+                    display: block;
+                    margin-top: 1rem ;
+                    margin-bottom: 2rem ;
+                    padding:1rem ;
+                    border-radius: .5rem;
+                    border: solid $color-grey .1rem;
+                    outline: none;
+                    transition: all .3s;
+                    &::-webkit-input-placeholder{
+                        color: $color-grey;
+                    }
+                    &:focus{
+                        border-color:$color-blue;
+                    }
+                }
+                input{
+                    width: 47%;
+                    &:nth-of-type(1),
+                    &:nth-of-type(3){
+                        margin-right: 1rem ;
+                    }
+                    @media (max-width:768px) {
+                        width:100%;
+                        &:nth-of-type(1),
+                        &:nth-of-type(3){
+                            margin-right: 0 ;
+                        }
+                    }
+                }
+                textarea{
+                    width:100%;
+                    height: 16.7rem;
+
+                }
+                button{
+                    display: block;
+                    background-color: $color-blue;
+                    padding: 1rem 6.5rem;
+                    color: $color-white;
+                    border: none;
+                    outline: none;
+                    margin-top: 2rem;
+                    transition: all .3s;
+                    backface-visibility: hidden;
+                    text-transform: uppercase;
+                    &:hover{
+                        transform: translateY(-.3rem);
+                        box-shadow: 0 .3rem .6rem $color-grey;
+                    }
+                    &:active{
+                        transform: translateY(.3rem);
+                        box-shadow: 0 .1rem .6rem $color-grey;
+                    }
+                }       
+            }
+        }
+    }
+    .contact-right{
+        .right{
+            padding: 4rem 3rem;
+            @media (max-width:768px) {
+                padding: 3rem 2rem;
+            }
+            @media (max-width:575.98) {
+                padding: 3rem ;
+            }
+            background-image:linear-gradient(to bottom, $color-blue,$color-green );
+            height: 100%;
+            h3{
+                font-size: 2rem;
+                color: $color-white;
+                font-weight: bold;
+                margin-bottom: 5rem;
+
+            }
+            .icon-box{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                .box{
+                    display: flex;
+                    margin-bottom: 7rem;
+                    img{
+                        width: 2rem;
+                        height: 2.8rem;
+                    }
+                    p{
+                        font-size: 2rem;
+                        color: $color-white;
+                        margin-left: 2rem;
+                        @media (max-width:768px) {
+                            width: 100%;
+                            font-size: 1.7rem;
+                        }        
+                        @media (max-width: 37.5em) {
+                            font-size: 2rem;
+                        }        
+        
+                    }
+                }
+                .box-bottom{
+                    display: flex;
+                    a:first-child{
+                        img{
+                            width: 2.2rem;
+                            height: 4.3rem;
+                            margin-right: 3rem;
+                            margin-left: 2rem;
+                        }
+                    }
+                    a:last-child{
+                        img{
+                            width:3.6rem;
+                            height: 5.3rem;
+                            margin-left: 3rem;
+                                
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+//end
+.end{
+    padding: 2.5rem;
+    background-color: $color-blue;
+}

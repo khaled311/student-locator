@@ -1,0 +1,121 @@
+body{
+    background-image: linear-gradient($color-blue, $color-green);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 100vh;
+}
+
+.logo{
+    text-align: center;
+    width: 100%;
+    margin-bottom: 3rem;
+}
+
+.login{
+    width: 45rem;
+    background-color: $color-white;
+    text-align: center;
+    padding: 3rem;
+    border-radius: .5rem;
+    box-shadow: 0 .2rem 1rem rgba($color-black, .2);
+
+    @include respond(phone){
+        width: 35rem;
+    }
+
+    & h1{
+        font-size: 6rem;
+        margin: 0;
+        color: $color-blue;
+    }
+
+    & p{
+        color: $color-black;
+        margin: -1.6rem 0 3rem;
+    }
+
+    & form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 70%;
+        margin: auto;
+
+
+        & .top{
+            display: flex;
+            align-items: baseline;
+            position: relative;
+            width: 100%;
+        }
+
+        & input{
+            border-radius: .5rem;
+            border: 1px solid #00AEEF;
+            padding: .5rem;
+            color: #00AEEF;
+            width: 100%;
+
+            &:focus{
+                outline: none;
+                & + label{
+                    transform: translateY(-2.7rem);
+                }
+            }
+        }
+    
+        & label{
+            order: -1;
+            margin: 0;
+            padding: 2px;
+            background-color: #FAFAFA;
+            pointer-events: none;
+            transition: .2s;
+            line-height: 1;
+            position: absolute;
+            top: 50%;
+            left: 1rem;
+            transform: translate(0, -50%);
+        }
+    
+        & img{
+            pointer-events: none;
+            position: absolute;
+            top: 50%;
+            right: 1rem;
+            transform: translate(0, -50%);
+        }
+    
+        & .bottom{
+            width: 100%;
+    
+            & a{
+                text-decoration: none;
+                color: $color-white;
+                display: block;
+                width: 100%;
+                margin: auto;
+                margin-top: 3rem;
+                padding: 1rem 7rem;
+                font-size: 1.4rem;
+                border: 0;
+                background-image: linear-gradient(to bottom, $color-blue, $color-green);
+                color: $color-white;
+                text-transform: uppercase;
+                transition: .2s;
+
+                &:active, &:focus{
+                    outline: none;
+                    box-shadow: 0 .2rem 1rem rgba($color-black, .2);
+                }
+
+                &:hover{
+                    box-shadow: 0 .2rem 1rem rgba($color-black, .2);
+                }
+            }
+        }
+    }
+}
